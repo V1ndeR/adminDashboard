@@ -5,21 +5,24 @@ import axios from 'axios'
 
 import Avatar from '@mui/material/Avatar'
 
-import userBg from '../icons/clark-van-der-beken-OvaPxvvFYNo-unsplash 1.png'
+import userBg from '../img/clark-van-der-beken-OvaPxvvFYNo-unsplash 1.png'
 
-import { stringAvatar } from './Users'
+import { stringAvatar } from '../helper/avatarName'
 
-import Dashboard from './Dashboard'
-import NavBar from './NavBar'
+import Dashboard from '../components/UI/Dashboard/Dashboard'
+import NavBar from '../components/UI/NavBar/NavBar'
+import { Loader } from '../components/UI/Loader/Loader'
 
 const UserInfo = () => {
   const { id } = useParams()
 
-  const { data: user, isSuccess } = useQuery(['user', id], async () => {
+  const { data: user, isSuccess, isError, error, isLoading } = useQuery(['user', id], async () => {
 
     const { data } = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
 
     return data
+  }, {
+    staleTime: 300000
   })
 
   return (
@@ -84,6 +87,12 @@ const UserInfo = () => {
               </>
           }
         </div>
+        {
+          isLoading && <Loader/>
+        }
+        {
+          isError && <div style={{ color: 'red' }}>Error: {error.message}</div>
+        }
       </div>
     </>
   )

@@ -1,38 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+
+th a {
+  font-family: 'Mulish', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  letter-spacing: 0.2px !important;
+  color: #252733;
+  text-decoration: none;
+}
+
+th a:visited {
+  font-family: 'Mulish', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  letter-spacing: 0.2px !important;
+  color: #252733;
+  text-decoration: none;
+}
+
+thead th {
+  font-family: 'Mulish', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  letter-spacing: 0.2px !important;
+  color: #9FA2B4 !important;
+}
+
+th {
+  font-family: 'Mulish', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+ letter-spacing: 0.2px !important;
+  color: #252733 !important;
+}
+
+tr {
+  cursor: pointer;
+}
+
+td {
+  font-family: 'Mulish', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  letter-spacing: 0.2px !important;
+  color: #252733 !important;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Mulish', sans-serif;
+  text-align: center;
+  background-color: #363740;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: 0.4px;
+  margin: 10px 0 10px 0;
+  padding: 0;
+
+  color: #000000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  margin: 0;
+  padding: 0;
+
+  color: #000000;
 }

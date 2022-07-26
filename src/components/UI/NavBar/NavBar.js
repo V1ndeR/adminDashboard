@@ -1,8 +1,8 @@
 import Avatar from '@mui/material/Avatar'
 
-import searchIcon from '../../img/search.png'
-import notificationIcon from '../../img/new.png'
-import avatarHeader from '../../img/m_header.png'
+import searchIcon from '../../../img/search.png'
+import notificationIcon from '../../../img/new.png'
+import avatarHeader from '../../../img/m_header.png'
 import './NavBar.css'
 
 const NavBar = () => {

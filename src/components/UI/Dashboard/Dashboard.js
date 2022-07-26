@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
-import Logo from '../../img/logo.png'
-import Vector from '../../img/Vector.png'
+import Logo from '../../../img/logo.png'
+import Vector from '../../../img/Vector.png'
 import './Dashboard.css'
 
 const Dashboard = () => {

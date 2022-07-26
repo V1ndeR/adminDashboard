@@ -11,35 +11,10 @@ import {
   TableRow } from '@mui/material'
 import Avatar from '@mui/material/Avatar'
 
-import NavBar from './NavBar'
+import { stringAvatar } from '../../helper/avatarName'
+import NavBar from '../UI/NavBar/NavBar'
+import { Loader } from '../UI/Loader/Loader'
 import './Users.css'
-
-export function stringToColor(string) {
-  let hash = 0
-  let i
-
-  for (i = 0; i < string.length; i += 1) {
-    hash = string.charCodeAt(i) + ((hash << 5) - hash)
-  }
-
-  let color = '#'
-
-  for (i = 0; i < 3; i += 1) {
-    const value = (hash >> (i * 8)) & 0xff
-    color += `00${value.toString(16)}`.slice(-2)
-  }
-
-  return color
-}
-
-export function stringAvatar(name) {
-  return {
-    sx: {
-      bgcolor: stringToColor(name)
-    },
-    children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`
-  }
-}
 
 const Users = () => {
 
@@ -55,12 +30,8 @@ const Users = () => {
 
   return (
     <>
-
       <div style={{ display: 'inline-table', backgroundColor: 'white', width: '100vw' }}>
         <NavBar/>
-        {
-          isLoading && <div>Loading...</div>
-        }
         <div className="table-wrapper">
           <div className="title-users">All users</div>
           <TableContainer component={Paper}>
@@ -148,42 +119,12 @@ const Users = () => {
               </TableBody>
             </Table>
           </TableContainer>
-          {/*<ul className="title-name">*/}
-          {/*  <li className="details">User details</li>*/}
-          {/*  <li>Company name</li>*/}
-          {/*  <li>Email</li>*/}
-          {/*  <li className="details">Distance</li>*/}
-          {/*</ul>*/}
-          {/*{*/}
-          {/*  isSuccess && users.map(el =>*/}
-          {/*    <ul className="user-info" key={el.id}>*/}
-          {/*      <li>*/}
-          {/*        <Avatar  style={{ marginRight: 10 }} {...stringAvatar(`${el.name}`)} />*/}
-          {/*        <div style={{ height: 36 }}>*/}
-          {/*          {el.name}*/}
-          {/*          <p style={{ padding: 0, margin: 0 }}>{el.address.city}</p>*/}
-          {/*        </div>*/}
-          {/*      </li>*/}
-          {/*      <li>*/}
-          {/*        <div style={{ height: 36 }}>*/}
-          {/*          {el.company.name}*/}
-          {/*          <p style={{ padding: 0, margin: 0 }}>{el.company.bs}</p>*/}
-          {/*        </div>*/}
-          {/*      </li>*/}
-          {/*      <li>*/}
-          {/*        <div style={{ height: 36 }}>*/}
-          {/*          {el.email}*/}
-          {/*          <p style={{ padding: 0, margin: 0 }}>{el.website}</p>*/}
-          {/*        </div>*/}
-          {/*      </li>*/}
-          {/*      <li style={{ background: '#F12B2C', borderRadius: 100, width: 54, height: 24 }}>distance</li>*/}
-          {/*      <li>...</li>*/}
-          {/*    </ul>*/}
-          {/*  )*/}
-          {/*}*/}
         </div>
         {
-          isError && <h1 style={{ color: 'red' }}>Error: {error.message}</h1>
+          isLoading && <Loader/>
+        }
+        {
+          isError && <div style={{ color: 'red' }}>Error: {error.message}</div>
         }
       </div>
     </>
