@@ -38,12 +38,8 @@ th {
   font-weight: 600 !important;
   font-size: 14px !important;
   line-height: 20px !important;
- letter-spacing: 0.2px !important;
+  letter-spacing: 0.2px !important;
   color: #252733 !important;
-}
-
-tr {
-  cursor: pointer;
 }
 
 td {
