@@ -1,0 +1,133 @@
+.table-wrapper {
+    box-sizing: border-box;
+
+    width: 95%;
+    padding: 0;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+}
+
+.stickyHeader {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    letter-spacing: 0.2px;
+
+    /* grayscale / gray */
+
+    color: #9FA2B4;
+
+}
+
+.title-users {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+
+    letter-spacing: 0.4px;
+
+    color: #252733;
+}
+
+ul.title-name {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+    list-style-type: none;
+    margin: 48px 0 12px 0;
+
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: 0.2px;
+
+    color: #9FA2B4;
+}
+
+.details {
+    display: flex;
+    width: 100px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: 92px;
+    /*border-bottom: 1px solid black;*/
+    border-top: 1.5px solid #DFE0EB;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0 40px 0 0;
+
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    letter-spacing: 0.2px;
+
+    /* grayscale / black */
+
+    color: #252733;
+}
+
+ul.user-info li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+ul.user-info li:first-child {
+    padding-left: 30px;
+}
+
+ul.user-info li:last-child {
+    padding-right: 30px;
+}
+
+ul.user-info li p {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    letter-spacing: 0.1px;
+
+    /* grayscale / gray light */
+
+    color: #C5C7CD;
+}

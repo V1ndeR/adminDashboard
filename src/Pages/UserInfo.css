@@ -1,0 +1,13 @@
+.user-info_wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+    margin: 25px;
+    position: relative;
+}
